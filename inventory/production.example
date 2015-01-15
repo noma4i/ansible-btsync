@@ -6,6 +6,4 @@
 #
 # Ubuntu 12.04 x64
 #
-host1 ansible_ssh_host=IP_ADDRESS is_splunk_indexer=1
-host2 ansible_ssh_host=IP_ADDRESS is_splunk_forwarder=1
-
+host1 ansible_ssh_host=IP_ADDRESS

@@ -188,7 +188,7 @@ parse_args $@
 
 #
 # I can't keep my real password file in revision control, for obvious reasons.
-# 
+#
 DIR="roles/nginx/templates"
 HTPASSWD="${DIR}/htpasswd"
 if test ! -f "${HTPASSWD}"
@@ -269,7 +269,7 @@ fi
 
 
 #
-# Extract our Vagrant public key from the private key so that 
+# Extract our Vagrant public key from the private key so that
 # we can put that into the Ubuntu user on Vagrant instances.
 #
 KEYFILE="$HOME/.vagrant.d/insecure_private_key"
@@ -285,32 +285,6 @@ then
 	echo "#"
 	echo "# Vagrant public key written in ${KEYFILE_PUB}!"
 	echo "#"
-fi
-
-
-#
-# Check for a Splunk deb file.
-# 
-if test ! -f "splunk.deb"
-then
-	echo "# "
-	echo "# "
-	echo "# Unable to find splunk.deb."
-	echo "# "
-	echo "# While Splunk is optional, I *highly recommend* using it to "
-	echo "# analyze your BitTorrent Sync logfiles."
-	echo "# "
-	echo "# Once you have a 64-bit .deb file, copy it to this directory and name it splunk.deb. "
-	echo "# I recommend that you then symlink \"splunk.deb\" to it. "
-	echo "# "
-	echo "# Don't worry about cost, you can use Splunk for free for "
-	echo "# up to 500 MB of data per day. Splunk is cool like that. :-) "
-	echo "# "
-	echo "# You can download a copy of Splunk Enterprise from: "
-	echo "#		http://www.splunk.com/download "
-	echo "# "
-	echo "# (And you should totally buy their product for the workplace. It's worth every penny.) "
-	echo "# "
 fi
 
 

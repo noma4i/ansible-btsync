@@ -7,12 +7,11 @@
   user: vagrant
   sudo: yes
   vars:
-  roles: 
+  roles:
     - update
     - common
     - { role: user, username: "ubuntu", tags: "user" }
     - { role: btsync, user: "ubuntu", tags: "btsync" }
-    - { role: splunk, user: "vagrant", tags: "splunk" }
 
 
 #
@@ -23,7 +22,7 @@
   user: root
   sudo: yes
   vars:
-  roles: 
+  roles:
     - update
     - common
     #
@@ -37,7 +36,6 @@
     # Digital Ocean specific things, such as setting up a swap file
     #
     - { role: provider-digital-ocean, tags: "provider" }
-    - { role: splunk, user: "ubuntu", tags: "splunk" }
 
 
 
